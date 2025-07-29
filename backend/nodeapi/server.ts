@@ -805,7 +805,7 @@ app.post('/api/quotations/:id/send-pdf-email', upload.none(), async (req, res) =
 });
 
 /* --- Transactions API (Fetching) --- */
-app.get('/transactions', async (req, res) => {
+app.get('/api/transactions', async (req, res) => {
   // Get query parameters. Renamed 'filter' to 'category' for clarity and consistency with frontend.
   const { type, category, accountId, search, fromDate, toDate } = req.query;
 
