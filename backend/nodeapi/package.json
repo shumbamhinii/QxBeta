@@ -2,11 +2,11 @@
   "name": "nodeapi",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon app.ts",
-    "start": "ts-node app.ts"
-  },
+"scripts": {
+  "dev": "nodemon app.ts",
+  "start": "ts-node app.ts",
+  "build": "echo 'No build step needed'"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
