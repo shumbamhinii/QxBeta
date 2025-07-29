@@ -13,7 +13,9 @@ const app = express();
 const PORT = 3000;
 const PDFDocument = require('pdfkit'); // For PDF generation
 
-app.use(cors()); // Enable CORS for all routes
+app.use(cors({
+  origin: '*', // Or your frontend domain specifically
+})); // Enable CORS for all routes // Enable CORS for all routes
 app.use(express.json()); // Enable JSON body parsing
 
 const pool = new Pool({
