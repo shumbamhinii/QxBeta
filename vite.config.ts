@@ -1,15 +1,19 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import path from "path";
+import path from "path"
 
 // https://vite.dev/config/
 export default defineConfig({
-    resolve: {
-        alias: {
-            "@": path.resolve(__dirname, "./src"),
-            "@server": path.resolve(__dirname, "./server/src"),
-        },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+      "@server": path.resolve(__dirname, "./server/src"),
     },
-  plugins: [react(),  tailwindcss()],
+  },
+  plugins: [react(), tailwindcss()],
+  preview: {
+    host: '0.0.0.0',
+    allowedHosts: ['madebyquant.onrender.com'] // ✅ Allow your Render domain
+  }
 })
